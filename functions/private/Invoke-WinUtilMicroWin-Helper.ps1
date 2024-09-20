@@ -47,6 +47,7 @@ function Remove-Features() {
             $_.FeatureName -NotLike "*NetFx*" -AND
             $_.FeatureName -NotLike "*Media*" -AND
             $_.FeatureName -NotLike "*NFS*" -AND
+            $_.FeatureName -NotLike "*SearchEngine*" -AND
             $_.State -ne "Disabled"
         }
 
@@ -165,7 +166,8 @@ function Remove-ProvisionedPackages() {
                 $_.PackageName -NotLike "*Paint*" -and
                 $_.PackageName -NotLike "*Gaming*" -and
                 $_.PackageName -NotLike "*Extension*" -and
-                $_.PackageName -NotLike "*SecHealthUI*"
+                $_.PackageName -NotLike "*SecHealthUI*" -and
+                $_.PackageName -NotLike "*ScreenSketch*"
         }
 
         $counter = 0
